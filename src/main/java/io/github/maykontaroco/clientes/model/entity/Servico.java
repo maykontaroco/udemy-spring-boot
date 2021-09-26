@@ -1,4 +1,4 @@
-package io.githut.maykontaroco.clientes.model.entity;
+package io.github.maykontaroco.clientes.model.entity;
 
 import lombok.Data;
 
