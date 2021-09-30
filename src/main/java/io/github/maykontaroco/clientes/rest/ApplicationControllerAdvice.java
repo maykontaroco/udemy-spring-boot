@@ -19,7 +19,7 @@ public class ApplicationControllerAdvice {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public Object handleValidationErrors(MethodArgumentNotValidException ex){
+    public ApiErrors handleValidationErrors(MethodArgumentNotValidException ex){
         BindingResult bindingResult = ex.getBindingResult();
         List<String> messages = bindingResult.getAllErrors().stream()
                 .map(DefaultMessageSourceResolvable::getDefaultMessage)
