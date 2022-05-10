@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 @Entity
 @Data
@@ -22,4 +23,7 @@ public class ServicoPrestado {
 
     @Column
     private BigDecimal valor;
+
+    @Column
+    private LocalDate data;
 }
